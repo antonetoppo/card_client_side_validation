@@ -1,0 +1,137 @@
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { background-color: #e4e4e4;}
+
+.hidden{ visibility: hidden;}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+    /*background-color: rgba(250, 70, 22, 0.8);*/
+
+.creditCard-validation {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.creditCard-validation .cc-view {
+    width: 400px;
+    margin: 0 auto 10px;
+    z-index: 2;
+    position: relative;
+    background: url("../img/map.png")center no-repeat;
+    background-size: cover;
+}
+
+.creditCard-validation .cc-view .cc-view-bg {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgba(250, 70, 22, 0.8);
+}
+
+.creditCard-validation .ccForm {
+    background-color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 10px;
+    padding-top: 120px;
+    position: relative;
+    top: -100px;
+}
+
+.creditCard-validation .cc-item {
+    border: 0;
+    margin-bottom: 10px;
+}
+
+.creditCard-validation .cc-item label {
+    display: block;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.creditCard-validation .ccForm .cc-item input,
+.creditCard-validation .ccForm .cc-item select{
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #fa4616;
+    border-radius: 4px;
+    height: 2.5em;
+    width: 21%;
+    text-align: center;
+    color: #555;
+}
+
+.creditCard-validation .ccForm .cc-item select > option {
+    background-color: #fa4616;
+    color: #fff;
+}
+
+.creditCard-validation .ccForm .cc-btn { text-align: center;}
+
+.creditCard-validation .ccForm .cc-btn button {
+    margin: 20px auto 0;
+    padding: 5px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0;
+}
+
+.creditCard-validation .cc-exp{
+    float: left;
+    width: 50%;
+}
+
+.creditCard-validation .cc-cvv {
+    float: right;
+    width: 50%;
+}
+
+.creditCard-validation .cc-type {
+    text-transform: uppercase;
+    text-align: center;
+    height: 50px;
+}
+
+
+.creditCard-validation .cc-view .cc-item p {
+    min-height: 1.2em;
+    font-size: 1.2em;
+    width: 24%;
+    /*text-align: center;*/
+    color: #fff;
+}
+
+.creditCard-validation .ccForm .cc-item.cc-holdername input,
+.creditCard-validation .cc-view .cc-item.cc-holdername p,
+.creditCard-validation .cc-view .cc-item.cc-number p {
+    width: 85%;
+}
+.creditCard-validation .ccForm .response-msg {
+    display: block;
+}
+
+.creditCard-validation .ccForm .response-msg.error {
+    color: red;
+}
+
+.creditCard-validation .ccForm .response-msg.success {
+    color: green;
+}
+
+

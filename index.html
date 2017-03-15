@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Credit Card Validation</title>
+
+    <link href="css/master.css" rel="stylesheet">
+</head>
+<body>
+    <section class="creditCard-validation">
+        <section class="cc-view">
+            <div class="cc-view-bg">
+                <h3 class="cc-type"></h3>
+                <div class="cc-number cc-item">
+                    <label>number</label>
+                    <p class="cc-view-number"></p>
+                </div>
+                <div class="clearfix">
+                    <div class="cc-exp cc-item">
+                        <label>valid upto</label>
+                        <p class="cc-view-exp"></p>
+                    </div>
+                    <div class="cc-cvv cc-item">
+                        <label>cvv</label>
+                        <p class="cc-view-cvv"></p>
+                    </div>
+                </div>
+                <div class="cc-holdername cc-item">
+                    <label>name</label>
+                    <p class="cc-view-name"></p>
+                </div>
+            </div>
+        </section>
+        <form action="" class="ccForm">
+            <fieldset class="cc-number cc-item">
+                <label>number</label>
+                <input type="text" class="cc-num" size="4" maxlength="4" pattern="[0-9]+" required>
+                <input type="text" class="cc-num" size="4" maxlength="4" pattern="[0-9]+" required>
+                <input type="text" class="cc-num" size="4" maxlength="4" pattern="[0-9]+" required>
+                <input type="text" class="cc-num" size="4" maxlength="4" pattern="[0-9]+" required>
+            </fieldset>
+            <div class="clearfix">
+            <fieldset class="cc-exp cc-item">
+                <label>valid upto</label>
+                <select name="cc-expMonth" id="cc-expMonth">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="cc-expYear" id="cc-expYear">
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                </select>
+            </fieldset>
+            <fieldset class="cc-cvv cc-item">
+                <label>cvv</label>
+                <input type="text" class="cc-cvvNum" size="3" maxlength="3" pattern="[0-9]+{3}" required>
+            </fieldset>
+            </div>
+            <fieldset class="cc-holdername cc-item">
+                <label>name</label>
+                <input type="text" class="cc-name" maxlength="30" pattern="[a-zA-z]+[a-zA-Z ]+" required>
+            </fieldset>
+            <div class="cc-btn">
+                <label class="response-msg"></label>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
