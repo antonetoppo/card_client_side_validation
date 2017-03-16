@@ -3,7 +3,11 @@ body * {
     padding: 0;
     box-sizing: border-box;
 }
-body { background-color: #e4e4e4;}
+body
+{
+    min-height: 97vh;
+    background: linear-gradient(50deg, #f3c680, hsla(179,54%,76%,1));
+}
 
 .hidden{ visibility: hidden;}
 

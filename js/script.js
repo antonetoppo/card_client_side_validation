@@ -116,6 +116,19 @@ $('#cc-expMonth ,#cc-expYear').on('change keyup', function () {
     var month = $('#cc-expMonth').val();
     var year = $('#cc-expYear').val();
     $('.cc-view-exp').text(month + '/' + year);
+
+    var today = new Date();
+    if (year < today.getFullYear())
+        $(".response-msg").removeClass("success").addClass("error").text("Invalid Year for Expiry Date");
+    else if (year == today.getFullYear())
+    {
+        if(month < today.getMonth()+1)
+            $(".response-msg").removeClass("success").addClass("error").text("Invalid Month for Expiry Date.");
+        else
+            $(".response-msg").removeClass("success error").text("");
+    }
+    else
+        $(".response-msg").removeClass("success error").text("");
 });
 
 
@@ -123,6 +136,11 @@ $('.cc-cvvNum').on('change keyup mouseup', function (key) {
     $('.cc-view-cvv').text(this.value);
 });
 
-$('.cc-name').on('change keyup mouseup', function (key) {
-    $('.cc-view-name').text(this.value);
+$('.cc-name').on('keydown', function (key) {
+    if (key.keyCode < 65 && key.keyCode > 90)
+        key.preventDefault()
 });
+
+// $('.cc-name').on('change mouseup', function (key) {
+//     $('.cc-view-name').text(this.value);
+// });
