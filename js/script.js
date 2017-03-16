@@ -141,6 +141,7 @@ $('.cc-name').on('keydown', function (key) {
         key.preventDefault()
 });
 
+// Do validation for name
 // $('.cc-name').on('change mouseup', function (key) {
 //     $('.cc-view-name').text(this.value);
 // });
